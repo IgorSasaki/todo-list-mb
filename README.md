@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# 📝 To-Do List com React (Aula 01 - Projeto Mentes Brilhantes)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi desenvolvido durante a **primeira aula prática** do curso de Programação do projeto Mentes Brilhantes - Araraquara/SP. O objetivo principal é introduzir os alunos ao desenvolvimento web com foco em **estruturação semântica de páginas HTML utilizando React (JSX)**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎯 Objetivos da Aula
 
-### `npm start`
+- Introduzir os conceitos de HTML e JSX
+- Compreender a estrutura básica de um projeto React
+- Construir a interface inicial de uma lista de tarefas (To-Do List)
+- Desenvolver o HTML da aplicação utilizando boas práticas de semântica e organização
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧠 Conteúdo Abordado
 
-### `npm test`
+### 📄 HTML (JSX)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `div`, `section`, `form`, `fieldset`, `label`, `input`, `ul`, `li`
+- Semântica de marcação
+- Estruturação visual de formulários e listas
 
-### `npm run build`
+### ⚛️ React
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Criação de componentes funcionais
+- Sintaxe JSX
+- Diferença entre `className` e `class`
+- Uso de `htmlFor` em vez de `for` nas labels
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧱 Estrutura Criada
 
-### `npm run eject`
+```jsx
+<div className="container">
+  <section className="form-container">
+    <h2>Formulário</h2>
+    <form>
+      <fieldset>
+        <label htmlFor="title">Título</label>
+        <input type="text" id="title" />
+      </fieldset>
+      <fieldset>
+        <label htmlFor="description">Descrição</label>
+        <input type="text" id="description" />
+      </fieldset>
+      <button type="submit">Salvar</button>
+    </form>
+  </section>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  <section className="list-container">
+    <h2>Lista de Tarefas</h2>
+    <ul>
+      <li>Tarefa 1</li>
+      <li>Tarefa 2</li>
+      <li>Tarefa 3</li>
+    </ul>
+  </section>
+</div>
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📦 Tecnologias Utilizadas
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [React](https://reactjs.org/)
+- HTML5 (JSX)
+- Vite / CRA (dependendo da inicialização)
+- Node.js (para ambiente React)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📚 Referências Complementares
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [MDN Web Docs – HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [React – Documentação Oficial](https://reactjs.org/docs/getting-started.html)
+- [JSX – O que é e como funciona](https://reactjs.org/docs/introducing-jsx.html)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚧 Próximos Passos do Projeto
 
-### Analyzing the Bundle Size
+- Estilização com CSS puro
+- Implementação de estados com `useState`
+- Adição de novas tarefas dinamicamente
+- Remoção e marcação de tarefas como concluídas
+- Persistência no `localStorage`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 👨‍🏫 Projeto Educacional
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Este projeto faz parte do curso **Programação e Novas Mídias** do **Projeto Mentes Brilhantes – Araraquara**, voltado à formação gratuita de jovens em situação de vulnerabilidade.
 
-### Advanced Configuration
+Professor responsável: **Igor Leonardo Sasaki da Silva Moreira**  
+[LinkedIn](https://www.linkedin.com/in/igor-sasaki) • [GitHub](https://github.com/IgorSasaki)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
