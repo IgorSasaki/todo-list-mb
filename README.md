@@ -1,36 +1,38 @@
-# 📝 To-Do List com React (Aula 01 - Projeto Mentes Brilhantes)
+# 📝 To-Do List com React (Aulas 01 e 02 - Projeto Mentes Brilhantes)
 
-Este projeto foi desenvolvido durante a **primeira aula prática** do curso de Programação do projeto Mentes Brilhantes - Araraquara/SP. O objetivo principal é introduzir os alunos ao desenvolvimento web com foco em **estruturação semântica de páginas HTML utilizando React (JSX)**.
+Este projeto está sendo desenvolvido durante as aulas práticas do curso de Programação do projeto Mentes Brilhantes - Araraquara/SP. O objetivo é introduzir os alunos ao desenvolvimento web com React, HTML e CSS puros por meio de um projeto prático: uma aplicação de Lista de Tarefas (To-Do List).
 
 ---
 
-## 🎯 Objetivos da Aula
+## 🎯 Objetivos Gerais
 
-- Introduzir os conceitos de HTML e JSX
 - Compreender a estrutura básica de um projeto React
-- Construir a interface inicial de uma lista de tarefas (To-Do List)
-- Desenvolver o HTML da aplicação utilizando boas práticas de semântica e organização
+- Utilizar HTML (JSX) de forma semântica
+- Estilizar páginas com CSS puro integrado ao React
+- Desenvolver componentes organizados e reutilizáveis
 
 ---
 
 ## 🧠 Conteúdo Abordado
 
-### 📄 HTML (JSX)
+### 📄 Aula 01 – Estrutura HTML com JSX
 
-- `div`, `section`, `form`, `fieldset`, `label`, `input`, `ul`, `li`
-- Semântica de marcação
-- Estruturação visual de formulários e listas
-
-### ⚛️ React
-
+- Tags semânticas: `section`, `form`, `fieldset`, `label`, `input`, `ul`, `li`
+- Organização visual da interface sem CSS
+- JSX: diferença entre `class` e `className`, `for` e `htmlFor`
 - Criação de componentes funcionais
-- Sintaxe JSX
-- Diferença entre `className` e `class`
-- Uso de `htmlFor` em vez de `for` nas labels
+
+### 🎨 Aula 02 – Estilização com CSS puro
+
+- Integração de CSS com React via `import './App.css'`
+- Conceitos de Box Model e Flexbox
+- Seletores e propriedades básicas de estilo
+- Responsividade e organização visual
+- Efeitos de `hover`, `focus` e `transition`
 
 ---
 
-## 🧱 Estrutura Criada
+## 🧱 Estrutura Desenvolvida
 
 ```jsx
 <div className="container">
@@ -66,26 +68,27 @@ Este projeto foi desenvolvido durante a **primeira aula prática** do curso de P
 
 - [React](https://reactjs.org/)
 - HTML5 (JSX)
-- Vite / CRA (dependendo da inicialização)
-- Node.js (para ambiente React)
+- CSS3 (puro)
+- Vite ou CRA para ambiente de desenvolvimento
+- Node.js (para execução do React)
 
 ---
 
 ## 📚 Referências Complementares
 
 - [MDN Web Docs – HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [MDN Web Docs – CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [React – Documentação Oficial](https://reactjs.org/docs/getting-started.html)
-- [JSX – O que é e como funciona](https://reactjs.org/docs/introducing-jsx.html)
+- [CSS Tricks – Guia Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ---
 
 ## 🚧 Próximos Passos do Projeto
 
-- Estilização com CSS puro
-- Implementação de estados com `useState`
-- Adição de novas tarefas dinamicamente
-- Remoção e marcação de tarefas como concluídas
-- Persistência no `localStorage`
+- Adicionar tarefas dinamicamente com `useState`
+- Criar eventos para adicionar, remover e marcar como concluída
+- Estilizar tarefas concluídas com `text-decoration: line-through`
+- Implementar persistência com `localStorage`
 
 ---
 
