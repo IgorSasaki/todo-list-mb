@@ -1,21 +1,39 @@
+import "./App.css";
+
 const App = () => {
   return (
-    <div>
-      <section>
-        <h2>Formulário</h2>
+    <div className="container">
+      {/* Seção do formulário para adicionar nova tarefa */}
+      <section className="form-container">
+        <h2>Adicionar Tarefa</h2>
 
         <form>
-          <label>Título</label>
-          <input type="text" />
+          {/* Campo para o título da tarefa */}
+          <fieldset>
+            <label htmlFor="title">Título</label>
+            <input
+              id="title"
+              type="text"
+              placeholder="Digite o título da tarefa"
+            />
+          </fieldset>
 
-          <label>Descrição</label>
-          <input type="text" />
+          {/* Campo para a descrição da tarefa */}
+          <fieldset>
+            <label htmlFor="description">Descrição</label>
+            <input
+              id="description"
+              type="text"
+              placeholder="Descreva a tarefa"
+            />
+          </fieldset>
 
-          <button>Salvar</button>
+          <button type="submit">Salvar</button>
         </form>
       </section>
 
-      <section>
+      {/* Seção que exibe a lista de tarefas já adicionadas */}
+      <section className="list-container">
         <h2>Lista de Tarefas</h2>
 
         <ul>
