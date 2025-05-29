@@ -1,30 +1,49 @@
 import "./App.css";
+import { useState } from "react";
 
 const App = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const [tasks, setTasks] = useState([]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!title || !description) return;
+
+    const newTask = {
+      id: Date.now().toLocaleString(),
+      title,
+      description,
+    };
+
+    setTasks([...tasks, newTask]);
+    setTitle("");
+    setDescription("");
+  };
+
   return (
     <div className="container">
-      {/* Seção do formulário para adicionar nova tarefa */}
-      <section className="form-container">
-        <h2>Adicionar Tarefa</h2>
+      <section id="form-container">
+        <h2>Formulário</h2>
 
-        <form>
-          {/* Campo para o título da tarefa */}
+        <form onSubmit={handleSubmit}>
           <fieldset>
-            <label htmlFor="title">Título</label>
+            <label>Título</label>
             <input
-              id="title"
               type="text"
-              placeholder="Digite o título da tarefa"
+              onChange={(event) => setTitle(event.target.value)}
+              value={title}
             />
           </fieldset>
 
-          {/* Campo para a descrição da tarefa */}
           <fieldset>
-            <label htmlFor="description">Descrição</label>
+            <label>Descrição</label>
             <input
-              id="description"
               type="text"
-              placeholder="Descreva a tarefa"
+              onChange={(event) => setDescription(event.target.value)}
+              value={description}
             />
           </fieldset>
 
@@ -32,14 +51,15 @@ const App = () => {
         </form>
       </section>
 
-      {/* Seção que exibe a lista de tarefas já adicionadas */}
-      <section className="list-container">
-        <h2>Lista de Tarefas</h2>
+      <section id="list-container">
+        <h2>Lista</h2>
 
         <ul>
-          <li>Tarefa 1</li>
-          <li>Tarefa 2</li>
-          <li>Tarefa 3</li>
+          {tasks?.map((item, index) => (
+            <li key={item.id}>
+              {item.title} - {item.description}
+            </li>
+          ))}
         </ul>
       </section>
     </div>
