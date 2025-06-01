@@ -93,7 +93,7 @@ const App = () => {
           <p>Carregando tarefas...</p>
         ) : (
           <ul>
-            {tasks.map((item) => (
+            {tasks?.map((item) => (
               <li key={item.id}>
                 <strong>{item.title}</strong> – {item.description}
               </li>

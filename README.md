@@ -1,15 +1,17 @@
-# 📝 To-Do List com React (Aulas 01 e 02 - Projeto Mentes Brilhantes)
+# 📝 To-Do List com React (Mentes Brilhantes)
 
-Este projeto está sendo desenvolvido durante as aulas práticas do curso de Programação do projeto Mentes Brilhantes - Araraquara/SP. O objetivo é introduzir os alunos ao desenvolvimento web com React, HTML e CSS puros por meio de um projeto prático: uma aplicação de Lista de Tarefas (To-Do List).
+Este projeto foi desenvolvido nas aulas práticas do curso de Programação do projeto **Mentes Brilhantes – Araraquara/SP**. O objetivo foi introduzir os alunos ao desenvolvimento web com React, HTML, CSS puro e integração com API Express, resultando em uma aplicação funcional de Lista de Tarefas.
 
 ---
 
 ## 🎯 Objetivos Gerais
 
-- Compreender a estrutura básica de um projeto React
-- Utilizar HTML (JSX) de forma semântica
-- Estilizar páginas com CSS puro integrado ao React
-- Desenvolver componentes organizados e reutilizáveis
+- Compreender a estrutura de um projeto React
+- Utilizar HTML (JSX) e CSS puro de forma semântica e responsiva
+- Implementar controle de estado com `useState` e efeitos com `useEffect`
+- Integrar o frontend a uma API real com Axios
+- Trabalhar com requisições HTTP (`GET`, `POST`)
+- Exibir mensagens de carregamento para melhorar a experiência do usuário
 
 ---
 
@@ -28,35 +30,48 @@ Este projeto está sendo desenvolvido durante as aulas práticas do curso de Pro
 - Conceitos de Box Model e Flexbox
 - Seletores e propriedades básicas de estilo
 - Responsividade e organização visual
-- Efeitos de `hover`, `focus` e `transition`
+
+### ⚛️ Aula 03 e seguintes – React com Estado e Integração com API
+
+- `useState` para controlar inputs e lista de tarefas
+- `useEffect` para carregar tarefas ao abrir o app
+- `axios` para fazer requisições à API (`GET /tasks`, `POST /tasks`)
+- Mensagens de carregamento (`loading`, `creating`)
+- Exibição dinâmica da lista de tarefas a partir do banco de dados
 
 ---
 
-## 🧱 Estrutura Desenvolvida
+## 🧱 Estrutura Final Desenvolvida
 
 ```jsx
 <div className="container">
   <section className="form-container">
     <h2>Formulário</h2>
-    <form>
+
+    <form onSubmit={handleSubmit}>
       <fieldset>
         <label htmlFor="title">Título</label>
-        <input type="text" id="title" />
+        <input type="text" id="title" name="title" />
       </fieldset>
+
       <fieldset>
         <label htmlFor="description">Descrição</label>
-        <input type="text" id="description" />
+        <input type="text" id="description" name="description" />
       </fieldset>
+
       <button type="submit">Salvar</button>
     </form>
   </section>
 
   <section className="list-container">
     <h2>Lista de Tarefas</h2>
+
     <ul>
-      <li>Tarefa 1</li>
-      <li>Tarefa 2</li>
-      <li>Tarefa 3</li>
+      {tasks?.map((task) => (
+        <li key={task.id}>
+          <strong>{task.title}</strong> – {task.description}
+        </li>
+      ))}
     </ul>
   </section>
 </div>
@@ -69,8 +84,9 @@ Este projeto está sendo desenvolvido durante as aulas práticas do curso de Pro
 - [React](https://reactjs.org/)
 - HTML5 (JSX)
 - CSS3 (puro)
-- Vite ou CRA para ambiente de desenvolvimento
-- Node.js (para execução do React)
+- [Axios](https://axios-http.com/)
+- [Vite](https://vitejs.dev/) para ambiente de desenvolvimento
+- Node.js (executando a API)
 
 ---
 
@@ -79,22 +95,25 @@ Este projeto está sendo desenvolvido durante as aulas práticas do curso de Pro
 - [MDN Web Docs – HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [MDN Web Docs – CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [React – Documentação Oficial](https://reactjs.org/docs/getting-started.html)
+- [Axios – Documentação Oficial](https://axios-http.com/)
 - [CSS Tricks – Guia Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ---
 
-## 🚧 Próximos Passos do Projeto
+## ✅ Projeto Concluído
 
-- Adicionar tarefas dinamicamente com `useState`
-- Criar eventos para adicionar, remover e marcar como concluída
-- Estilizar tarefas concluídas com `text-decoration: line-through`
-- Implementar persistência com `localStorage`
+Todas as metas da aplicação foram atingidas:
+
+- Integração completa com backend via API REST
+- Tarefas são criadas e listadas usando dados reais
+- O usuário recebe feedback visual em tempo real
+- Organização semântica, responsiva e funcional
 
 ---
 
 ## 👨‍🏫 Projeto Educacional
 
-Este projeto faz parte do curso **Programação e Novas Mídias** do **Projeto Mentes Brilhantes – Araraquara**, voltado à formação gratuita de jovens em situação de vulnerabilidade.
+Este projeto faz parte do curso **Programação e Novas Mídias** do **Projeto Mentes Brilhantes – Araraquara**, voltado à formação gratuita de jovens em situação de vulnerabilidade social.
 
 Professor responsável: **Igor Leonardo Sasaki da Silva Moreira**  
 [LinkedIn](https://www.linkedin.com/in/igor-sasaki) • [GitHub](https://github.com/IgorSasaki)
